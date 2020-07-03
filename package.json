@@ -1,7 +1,7 @@
 {
   "name": "electricaribe-polizas",
   "version": "1.0.0",
-  "description": "",
+  "description": "Este paquete permite consultar un rango de polizas de clientes de Electricaribe",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,5 +10,15 @@
   "license": "ISC",
   "dependencies": {
     "node-fetch": "^2.6.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/parrotsoft/electricaribe-polizas.git"
+  },
+  "keywords": ["electricaribe","polizas"],
+  "bugs": {
+    "url": "https://github.com/parrotsoft/electricaribe-polizas/issues"
+  },
+  "homepage": "https://github.com/parrotsoft/electricaribe-polizas#readme"
 }
