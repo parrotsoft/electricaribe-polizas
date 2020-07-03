@@ -8,15 +8,16 @@
   },
   "author": "Miguel Lopez Ariza <lopezarizamiguel@gmail.com>",
   "license": "ISC",
-  "dependencies": {
-    "node-fetch": "^2.6.0"
-  },
+  "dependencies": {},
   "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/parrotsoft/electricaribe-polizas.git"
   },
-  "keywords": ["electricaribe","polizas"],
+  "keywords": [
+    "electricaribe",
+    "polizas"
+  ],
   "bugs": {
     "url": "https://github.com/parrotsoft/electricaribe-polizas/issues"
   },

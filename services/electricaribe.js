@@ -1,5 +1,4 @@
-
-const fetch = require('node-fetch');
+const httpClient = require('../core/http-client');
 
 /**
  * 
@@ -16,12 +15,11 @@ function getData(startPoliza, end) {
 
     let arrayPro = [];
     promises.forEach((item) => {
+        const url =  `https://pagoselectricaribe.facture.co/DesktopModules/Gateway.Commons/API/Documento/getDocumentoPago?cdPoliza=${item}`;
         arrayPro.push(
-            fetch(`https://pagoselectricaribe.facture.co/DesktopModules/Gateway.Commons/API/Documento/getDocumentoPago?cdPoliza=${item}`)
-                .then((resp) => resp.json())
-                .then(data => {
-                    if (data[0].amt_Valor) {
-                        return ({
+            httpClient.get(url).then((data) => {
+                if (data[0].amt_Valor) {
+                    return ({
                             valor: data[0].amt_Valor,
                             estado: data[0].Codigo_EstadoPagoDocumento,
                             numero_documento: data[0].cd_NumeroDocumento,
@@ -29,7 +27,7 @@ function getData(startPoliza, end) {
                             vencimiento: data[0].dt_Vencimiento
                         });
                     }
-                 })
+            })
         );
     });
 
